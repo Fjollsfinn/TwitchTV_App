@@ -1,0 +1,27 @@
+{
+  "name": "twitchtv_app",
+  "version": "1.0.0",
+  "description": "Web app to check if twitch streamers are online or offline.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fjollsfinn/TwitchTV_App.git"
+  },
+  "keywords": [
+    "twitch",
+    "twitchTV",
+    "freecodecamp"
+  ],
+  "author": "Bartłomiej Tuchowski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fjollsfinn/TwitchTV_App/issues"
+  },
+  "homepage": "https://github.com/Fjollsfinn/TwitchTV_App#readme",
+  "devDependencies": {
+    "node-sass": "^4.8.3"
+  }
+}
