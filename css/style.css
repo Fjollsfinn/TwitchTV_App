@@ -61,7 +61,7 @@ body {
   overflow-y: hidden; }
   @media (max-width: 25em) {
     .container {
-      width: 30rem; } }
+      width: 27rem; } }
   .container.hidden {
     opacity: 0; }
   .container__header {
