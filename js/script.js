@@ -83,11 +83,13 @@ $(document).ready(function() {
         if (input == "") {
             //This part is to avoid adding undefinded streamer after reseting the input content.
             getOnline(commonStreamers);
-            getOffline(commonStreamers);
+            getOffline(commonStreamers);//Triggers updatePopup() function with the new data(entred by user).
         }
         else {
             getOnline(entredName); //Calling getOnline() function with new data. Won't work if streamer is offline.
             getOffline(entredName); //Calling getOffline() function with new data. Won't work if streamer is online.
+            //Triggers updatePopup() function with the new data(entred by user).
+            updatePopup(document.getElementsByClassName('container__input')[0].value);
         }
     }
   
@@ -156,8 +158,4 @@ $(document).on("click", ".ninja", function() {
 });
 $(document).on("click", ".izakooo", function() {
    updatePopup("izakooo");
-});
-//Triggers updatePopup() function with the new data(entred by user).
-$('.container__input').change(function () {
-    updatePopup(document.getElementsByClassName('container__input')[0].value);
 });
