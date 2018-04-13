@@ -1,0 +1,394 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+//VARIBLES, MIXINS.
+$twitchColorDarker: #623fa3;
+$twitchColorBrighter: #9a7ecd;
+$buttonsColor: #bfbfbf;
+$colorRed: #ff0000;
+$colorBlack: #000000;
+$colorWhite: #ffffff;
+$onlineColor: #39e600;
+$offlineColor: #bfbfbf;
+  
+//Fix floating problem.
+@mixin clearfix {
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+  
+//SCSS styles below.
+html {
+    font-size: 62.5%;
+}
+  
+body {
+    height: 100vh;
+    background: linear-gradient(to top right, $twitchColorDarker 40%, $twitchColorBrighter 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+  
+.bg-video {
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    opacity: .2;
+    
+    &__content {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+}
+  
+.container {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    font-family: 'Roboto Mono', monospace;
+    max-width: 39rem;
+    max-height: 54.5rem;
+    background-color: white;
+    border-radius: .3rem;
+    opacity: 1;
+    transition: all 2s ease-out 1s;
+    overflow-y: hidden;
+    
+    &.hidden {
+        opacity: 0;
+    }
+    
+    &__header {
+        border-radius: .3rem .3rem 0 0;
+        padding-top: .3rem;
+        height: 12rem;
+        border-bottom: .5rem solid $twitchColorDarker;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+  
+        a {
+            transition: all .3s ease-out;
+        
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+    &__buttons {
+        text-align: center;
+        border-bottom: .5rem solid $twitchColorDarker;
+        margin-bottom: 2rem;
+      
+        .row {
+            margin: 1.5rem 0;
+        
+            .col-1-of-3,
+            .col-2-of-3,
+            .col-3-of-3 {
+                display: inline-block;
+                margin: 0 auto;
+          
+                button {
+                    text-align: center;
+                    color: $twitchColorDarker;
+                    height: 3.5rem;
+                    width: 9rem;
+                    background-color: $buttonsColor;
+                    border-radius: 10rem;
+                    outline: none !important;
+                    border: none;
+                    text-transform: uppercase;
+                    font-weight: 900;  
+                    font-size: 1.2rem;
+                    transition: all .4s ease-out;
+                    position: relative;
+            
+                    &:hover {
+                        transform: translateY(-0.3rem);
+                        box-shadow: 0 1rem 2rem;
+                    }
+            
+                    &:active {
+                        transform: translateY(-0.1rem);
+                        box-shadow: 0 .5rem 1rem;
+                    }
+            
+                    &::after {
+                        content: "";
+                        display: block;
+                        top: 0;
+                        height: 100%;
+                        width: 100%;
+                        position: absolute;
+                        background-color: $twitchColorBrighter;
+                        border-radius: 10rem;
+                        z-index: -1;
+                        transition: all .5s ease-out;
+                    }
+            
+                    &:hover::after {
+                        transform: scaleX(1.4) scaleY(1.6);
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    &__input-box-center {
+        margin: 0 auto;
+        margin-top: 1.5rem;
+    }
+    
+    &__input {
+        outline: none;
+        border-radius: 3rem;
+        height: 3rem;
+        width: 14rem;
+        padding-left: 1rem;
+        border: .3rem solid $twitchColorDarker;
+    }
+    
+    &__status--online,
+    &__status--offline {
+        opacity: 0;
+        display: none;
+        &.visible {
+            opacity: 1;
+            display: block;
+        }
+    }
+    
+    &__twitch-user {
+        position:relative;
+        @include clearfix;
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+        border-radius: .3rem;
+        transition: all .3s ease-out;
+        max-width: 32rem;
+        //This prevents from hideing overflow-x when hover(scale). Fix the problem when overflow-y: scroll;
+        transform-origin: 0 0;
+      
+        &:hover{
+            transform: scale(1.05);
+            box-shadow: 0 1rem 2rem $twitchColorBrighter;
+        }
+      
+        .logo-box {
+            float: left;
+            height: 6rem;
+            width: 6rem;
+            border: .2rem solid $twitchColorDarker;
+            margin: 0 1rem 0 0;
+        }
+      
+        h1 {
+            font-size: 1.6rem;
+            font-weight: bold;
+        }
+      
+        .marker--online {
+            height: 1rem;
+            width: 1rem;
+            background-color: $onlineColor;
+            border-radius: 50%;
+            margin: .5rem;
+        }
+      
+        .marker--offline {
+            height: 1rem;
+            width: 1rem;
+            background-color: $offlineColor;
+            border-radius: 50%;
+            margin: .5rem;
+        }
+      
+        p {
+            margin-bottom: 0;
+        }
+      
+        [class*="col"] {
+            &:not(:last-child) {
+            margin-right: 2rem;
+            }
+        }
+      
+        .col-2-of-3 {
+            color: $twitchColorDarker;
+        }
+        
+        .col-3-of-3 {
+            color: $colorRed;
+        }
+    }
+
+    #content {
+        overflow-y: scroll;
+        max-height: 30rem;
+        
+        a {
+            text-decoration: none;
+            color: $colorBlack;
+        }
+    }
+}
+  
+.popup {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($colorBlack, .75);
+    
+    //Hidden when not target.
+    visibility: hidden;
+    opacity: 0;
+    
+    &__box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.25);
+        background-color: $colorWhite;
+        width: 75%;
+        height: auto;
+        border-radius: 3px;
+        box-shadow: 0 2rem 4rem rgba($colorBlack, .8);
+        opacity: 0;
+        transition: all .5s .2s;
+        font-size: 1.6rem;
+        color: $colorBlack;
+    }
+    
+    &:target {
+        //Visible when target.
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    
+    &__left {
+        width: 50%;
+        display: table-cell
+    }
+    
+    &__img {
+        width: 100%;
+        display: block;
+    }
+    
+    &__right {
+        width: 50%;
+        display: table-cell;
+        vertical-align: top;
+        padding: 3rem 5rem;
+        text-align: center;
+    }
+    
+    &__info {
+        display: flex;
+        
+        .fa-user {
+            color: $twitchColorDarker;
+        }
+      
+        .fa-heart {
+            color: $colorRed;
+        }
+    }
+    
+    &__header {
+        margin-bottom: 5rem;
+        font-size: 3rem;
+        font-weight: bold;
+        background-image: linear-gradient(to right, $twitchColorDarker, $twitchColorBrighter);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-transform: uppercase;
+        transition: all .3s;
+        &:hover {
+            transform: skewY(3deg) skewX(15deg) scale(1.1);
+            text-shadow: .5rem 1rem 2rem rgba($colorBlack, 0.2);
+        }
+      
+        &--mini {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            background-image: linear-gradient(to right, $twitchColorDarker, $twitchColorBrighter);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-right: 1rem;
+        }
+    }
+    
+    &__text {
+        font-size: 1.6rem;
+        color: $colorBlack;
+        margin-right: 1rem;
+    }
+    
+    &__close {
+        &:link,
+        &:visited {
+            position: absolute;
+            display: inline-block;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            font-weight: bold;
+            color: $colorBlack;
+            line-height: 1;
+            text-decoration: none;
+            transition: all .3s; 
+        }
+      
+        &:hover {
+            color: $twitchColorDarker;
+        }
+    }
+    
+    &:target &__box {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }    
+}
+  
+.btn-text {
+    margin-top: 4.5rem;
+    &:link,
+    &:visited {
+        color: $twitchColorBrighter;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $twitchColorBrighter;
+        padding: 3px;
+        font-size: 1.6rem;
+        transition: all .2s;
+    }
+    
+    &:hover {
+        background-color: $twitchColorBrighter;
+        color: $colorWhite;
+        box-shadow: 0 1rem 2rem rgba($colorBlack, .15);
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($colorBlack, .15);
+        transform: translateY(0);
+    }
+}
