@@ -122,7 +122,7 @@ body {
     overflow-y: hidden;
 
     @include respond(phone-very-slim) {
-        width: 32rem;
+        width: 34rem;
     }
     
     &.hidden {
