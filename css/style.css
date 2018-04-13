@@ -2,6 +2,21 @@
   margin: 0;
   padding: 0; }
 
+/*
+0 - 400px:      Very slim phone
+400 - 500px:    Slim phone     
+500 - 600px:    Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  is where our normal styles apply
+1800px + :      Big desktop
+$breakpoint argument choices:
+- phone-slim
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 html {
   font-size: 62.5%; }
 
