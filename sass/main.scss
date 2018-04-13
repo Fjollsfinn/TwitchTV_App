@@ -52,8 +52,9 @@ body {
     top: 5%;
     left: 50%;
     transform: translateX(-50%) translateY(0);
+    padding: 0 1.5rem;
     font-family: 'Roboto Mono', monospace;
-    max-width: 39rem;
+    width: 37rem;
     max-height: 54.5rem;
     background-color: white;
     border-radius: .3rem;
@@ -95,7 +96,7 @@ body {
             .col-2-of-3,
             .col-3-of-3 {
                 display: inline-block;
-                margin: 0 auto;
+                margin: 0 1rem;
           
                 button {
                     text-align: center;
@@ -153,9 +154,11 @@ body {
         outline: none;
         border-radius: 3rem;
         height: 3rem;
-        width: 14rem;
+        width: 12.4rem;
         padding-left: 1rem;
         border: .3rem solid $twitchColorDarker;
+        font-family: inherit;
+        font-size: 1rem;
     }
     
     &__status--online,
@@ -190,6 +193,10 @@ body {
             width: 6rem;
             border: .2rem solid $twitchColorDarker;
             margin: 0 1rem 0 0;
+
+            .img-streamer-logo {
+                width: 100%;
+            }
         }
       
         h1 {

@@ -15,7 +15,7 @@ $(document).ready(function() {
                     newContent += "<a href='#popup' class='" + item + "'>";
                     newContent += "<div class='container__twitch-user'>";
                     newContent += "<div class='logo-box'>";
-                    newContent += "<img class='img-fluid' src='" + sjsonp.stream.channel.logo + "' alt='user_logo'>";
+                    newContent += "<img class='img-streamer-logo' src='" + sjsonp.stream.channel.logo + "' alt='user_logo'>";
                     newContent += "</div>";
                     newContent += "<div class='row'>"
                     newContent += "<div><h1>" + sjsonp.stream.channel.name+ "</h1></div>";
@@ -53,7 +53,7 @@ $(document).ready(function() {
                             newContent += "<a href='#popup' class='" + item + "'>";
                             newContent += "<div class='container__twitch-user'>";
                             newContent += "<div class='logo-box'>";
-                            newContent += "<img class='img-fluid' src='" + cjsonp.logo + "' alt='user_logo'>";
+                            newContent += "<img class='img-streamer-logo' src='" + cjsonp.logo + "' alt='user_logo'>";
                             newContent += "</div>";
                             newContent += "<div class='row'>"
                             newContent += "<div><h1>" + cjsonp.name+ "</h1></div>";
