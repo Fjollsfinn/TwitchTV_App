@@ -55,7 +55,7 @@ body {
     padding: 0 1.5rem;
     font-family: 'Roboto Mono', monospace;
     width: 37rem;
-    max-height: 54.5rem;
+    max-height: 57rem;
     background-color: white;
     border-radius: .3rem;
     opacity: 1;
@@ -198,6 +198,10 @@ body {
                 width: 100%;
             }
         }
+
+        .row {
+            display: flex;
+        }
       
         h1 {
             font-size: 1.6rem;
@@ -257,6 +261,7 @@ body {
     top: 0;
     left: 0;
     background-color: rgba($colorBlack, .75);
+    font-family: 'Roboto Mono', monospace;
     
     //Hidden when not target.
     visibility: hidden;
@@ -339,6 +344,7 @@ body {
             background-clip: text;
             color: transparent;
             margin-right: 1rem;
+            margin-bottom: 1rem;
         }
     }
     

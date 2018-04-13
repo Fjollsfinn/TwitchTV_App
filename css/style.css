@@ -29,7 +29,7 @@ body {
   padding: 0 1.5rem;
   font-family: 'Roboto Mono', monospace;
   width: 37rem;
-  max-height: 54.5rem;
+  max-height: 57rem;
   background-color: white;
   border-radius: .3rem;
   opacity: 1;
@@ -145,6 +145,8 @@ body {
       margin: 0 1rem 0 0; }
       .container__twitch-user .logo-box .img-streamer-logo {
         width: 100%; }
+    .container__twitch-user .row {
+      display: flex; }
     .container__twitch-user h1 {
       font-size: 1.6rem;
       font-weight: bold; }
@@ -182,6 +184,7 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.75);
+  font-family: 'Roboto Mono', monospace;
   visibility: hidden;
   opacity: 0; }
   .popup__box {
@@ -240,7 +243,8 @@ body {
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      margin-right: 1rem; }
+      margin-right: 1rem;
+      margin-bottom: 1rem; }
   .popup__text {
     font-size: 1.6rem;
     color: #000000;
