@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="author" content="Bartłomiej Tuchowski">
+        <title>TwitchTV_App<</title>
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+                <source src="img/Mickey.mp4" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
+                <source src="img/Mickey.webm" type="video/webm">Your browser does not support the video tag. I suggest you upgrade your browser.
+            </video>
+        </div>
+        <div class="container hidden">
+            <div class="container__header">
+                <a href="https://www.twitch.tv/" target="_blank"><img src="img/twitch-logo.png" alt="twitch-logo"></a>
+            </div>
+            <div class="container__buttons">
+                <div class="row">
+                    <div class="col-1-of-3">
+                        <button class="container__buttons--online">online</button>
+                    </div>
+                    <div class="col-2-of-3">
+                        <button class="container__buttons--offline">offline</button>
+                    </div>
+                    <div class="col-3-of-3">
+                        <button class="container__buttons--all">all</button>
+                    </div>
+                    <div class="container__input-box-center">
+                        <input type="text" class="container__input" name="streamer-name" placeholder="Enter streamer name">
+                    </div>
+              </div>
+            </div>
+            <div id="content"></div>
+        </div>
+        <div class="popup" id="popup">
+            <div class="popup__box" id="popup__box"></div>
+        </div>
+    </body>
+</html>
