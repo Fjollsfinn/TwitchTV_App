@@ -72,6 +72,14 @@ $breakpoint argument choices:
 //SCSS styles below.
 html {
     font-size: 62.5%;
+
+    @include respond(phone) {
+        font-size: 56.25%;
+    }
+
+    @include respond(phone-slim) {
+        font-size: 50%;
+    }
 }
   
 body {
@@ -87,6 +95,10 @@ body {
     z-index: -5;
     opacity: .2;
     
+    @include respond(phone-very-slim) {
+        opacity: 0;
+    }
+
     &__content {
       width: 100%;
       height: 100%;
@@ -108,6 +120,10 @@ body {
     opacity: 1;
     transition: all 2s ease-out 1s;
     overflow-y: hidden;
+
+    @include respond(phone-very-slim) {
+        width: 30rem;
+    }
     
     &.hidden {
         opacity: 0;
@@ -138,6 +154,10 @@ body {
       
         .row {
             margin: 1.5rem 0;
+
+            @include respond(phone-very-slim) {
+                margin: 1rem 0;
+            }
         
             .col-1-of-3,
             .col-2-of-3,
@@ -159,6 +179,10 @@ body {
                     font-size: 1.2rem;
                     transition: all .4s ease-out;
                     position: relative;
+
+                    @include respond(phone-very-slim) {
+                        width: 7rem;
+                    }
             
                     &:hover {
                         transform: translateY(-0.3rem);

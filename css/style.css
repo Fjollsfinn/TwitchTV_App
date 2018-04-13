@@ -19,6 +19,12 @@ $breakpoint argument choices:
 */
 html {
   font-size: 62.5%; }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 31.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   height: 100vh;
@@ -31,6 +37,9 @@ body {
   height: 100%;
   z-index: -5;
   opacity: .2; }
+  @media (max-width: 25em) {
+    .bg-video {
+      opacity: 0; } }
   .bg-video__content {
     width: 100%;
     height: 100%;
@@ -50,6 +59,9 @@ body {
   opacity: 1;
   transition: all 2s ease-out 1s;
   overflow-y: hidden; }
+  @media (max-width: 25em) {
+    .container {
+      width: 30rem; } }
   .container.hidden {
     opacity: 0; }
   .container__header {
@@ -70,6 +82,9 @@ body {
     margin-bottom: 2rem; }
     .container__buttons .row {
       margin: 1.5rem 0; }
+      @media (max-width: 25em) {
+        .container__buttons .row {
+          margin: 1rem 0; } }
       .container__buttons .row .col-1-of-3,
       .container__buttons .row .col-2-of-3,
       .container__buttons .row .col-3-of-3 {
@@ -91,6 +106,11 @@ body {
           font-size: 1.2rem;
           transition: all .4s ease-out;
           position: relative; }
+          @media (max-width: 25em) {
+            .container__buttons .row .col-1-of-3 button,
+            .container__buttons .row .col-2-of-3 button,
+            .container__buttons .row .col-3-of-3 button {
+              width: 7rem; } }
           .container__buttons .row .col-1-of-3 button:hover,
           .container__buttons .row .col-2-of-3 button:hover,
           .container__buttons .row .col-3-of-3 button:hover {
