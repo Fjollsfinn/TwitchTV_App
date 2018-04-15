@@ -19,13 +19,13 @@ $(document).ready(function() {
                     newContent += "</div>";
                     newContent += "<div class='row'>"
                     newContent += "<div><h1>" + sjsonp.stream.channel.name+ "</h1></div>";
-                    newContent += "<div class='marker--online'></div>";
+                    newContent += "<div class='marker marker--online'></div>";
                     newContent += "</div>";
                     newContent += "<p>" + sjsonp.stream.game + "</p>";
                     newContent += "<div class='row'>";
                     newContent += "<div class='col-1-of-3'><i class='fa fa-eye'> " + sjsonp.stream.viewers + "</i></div>";
-                    newContent += "<div class='col-2-of-3'><i class='fa fa-user'> " + sjsonp.stream.channel.views + "</i></div>";
-                    newContent += "<div class='col-3-of-3'><i class='fa fa-heart'> " + sjsonp.stream.channel.followers + "</i></div>";
+                    newContent += "<div class='col-1-of-3--violet'><i class='fa fa-user'> " + sjsonp.stream.channel.views + "</i></div>";
+                    newContent += "<div class='col-1-of-3--red'><i class='fa fa-heart'> " + sjsonp.stream.channel.followers + "</i></div>";
                     newContent += "</div></div></a></div>";
                     document.getElementById("content").innerHTML = newContent;
                 }
@@ -57,13 +57,13 @@ $(document).ready(function() {
                             newContent += "</div>";
                             newContent += "<div class='row'>"
                             newContent += "<div><h1>" + cjsonp.name+ "</h1></div>";
-                            newContent += "<div class='marker--offline'></div>";
+                            newContent += "<div class='marker marker--offline'></div>";
                             newContent += "</div>";
                             newContent += "<p>Offline</p>";
                             newContent += "<div class='row'>";
                             newContent += "<div class='col-1-of-3'><i class='fa fa-eye'> 0 </i></div>";
-                            newContent += "<div class='col-2-of-3'><i class='fa fa-user'> " + cjsonp.views + "</i></div>";
-                            newContent += "<div class='col-3-of-3'><i class='fa fa-heart'> " + cjsonp.followers + "</i></div>";
+                            newContent += "<div class='col-1-of-3--violet'><i class='fa fa-user'> " + cjsonp.views + "</i></div>";
+                            newContent += "<div class='col-1-of-3--red'><i class='fa fa-heart'> " + cjsonp.followers + "</i></div>";
                             newContent += "</div></div></a></div>";
                             document.getElementById("content").innerHTML = newContent;
                         }

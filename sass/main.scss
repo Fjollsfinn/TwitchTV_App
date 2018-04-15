@@ -160,9 +160,7 @@ body {
                 margin: 1rem 0;
             }
         
-            .col-1-of-3,
-            .col-2-of-3,
-            .col-3-of-3 {
+            .col-1-of-3 {
                 display: inline-block;
                 margin: 0 1rem;
           
@@ -280,20 +278,19 @@ body {
             font-weight: bold;
         }
       
-        .marker--online {
+        .marker {
             height: 1rem;
             width: 1rem;
-            background-color: $onlineColor;
             border-radius: 50%;
             margin: .5rem;
-        }
-      
-        .marker--offline {
-            height: 1rem;
-            width: 1rem;
-            background-color: $offlineColor;
-            border-radius: 50%;
-            margin: .5rem;
+
+            &--online {
+                background-color: $onlineColor;
+            }
+
+            &--ofline {
+                background-color: $offlineColor;
+            }
         }
       
         p {
@@ -306,11 +303,11 @@ body {
             }
         }
       
-        .col-2-of-3 {
+        .col-1-of-3--violet {
             color: $twitchColorDarker;
         }
         
-        .col-3-of-3 {
+        .col-1-of-3--red {
             color: $colorRed;
         }
     }
