@@ -110,7 +110,7 @@ body {
             .container__buttons .row .col-1-of-3 button,
             .container__buttons .row .col-2-of-3 button,
             .container__buttons .row .col-3-of-3 button {
-              width: 8.5rem; } }
+              width: 8rem; } }
           .container__buttons .row .col-1-of-3 button:hover,
           .container__buttons .row .col-2-of-3 button:hover,
           .container__buttons .row .col-3-of-3 button:hover {

@@ -181,7 +181,7 @@ body {
                     position: relative;
 
                     @include respond(phone-very-slim) {
-                        width: 8.5rem;
+                        width: 8rem;
                     }
             
                     &:hover {
