@@ -121,7 +121,7 @@ body {
     border-radius: .3rem;
     opacity: 1;
     transition: all 2s ease-out 1s;
-    overflow-y: hidden;
+    overflow: hidden;
 
     @include respond(phone-very-slim) {
         width: 34rem;
