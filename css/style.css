@@ -11,6 +11,7 @@
 1200 - 1800px:  is where our normal styles apply
 1800px + :      Big desktop
 $breakpoint argument choices:
+-phone-vey-slim
 - phone-slim
 - phone
 - tab-port
@@ -226,6 +227,21 @@ body {
   .popup__left {
     width: 50%;
     display: table-cell; }
+    @media (max-width: 75em) {
+      .popup__left {
+        width: 23%;
+        display: block;
+        position: absolute;
+        top: 20%;
+        right: 0;
+        border: 3px solid #623fa3; } }
+    @media (max-width: 37.5em) {
+      .popup__left {
+        width: 30%;
+        top: 30%; } }
+    @media (max-width: 31.25em) {
+      .popup__left {
+        top: 32%; } }
   .popup__img {
     width: 100%;
     display: block; }
@@ -235,6 +251,11 @@ body {
     vertical-align: top;
     padding: 3rem 5rem;
     text-align: center; }
+    @media (max-width: 75em) {
+      .popup__right {
+        width: 100%;
+        display: block;
+        padding: 0; } }
   .popup__info {
     display: flex; }
     .popup__info .fa-user {
@@ -251,6 +272,9 @@ body {
     color: transparent;
     text-transform: uppercase;
     transition: all .3s; }
+    @media (max-width: 75em) {
+      .popup__header {
+        padding-top: 3rem; } }
     .popup__header:hover {
       transform: skewY(3deg) skewX(15deg) scale(1.1);
       text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -264,6 +288,12 @@ body {
       color: transparent;
       margin-right: 1rem;
       margin-bottom: 1rem; }
+      @media (max-width: 75em) {
+        .popup__header--mini {
+          padding-left: 5rem; } }
+      @media (max-width: 37.5em) {
+        .popup__header--mini {
+          padding-left: 3rem; } }
   .popup__text {
     font-size: 1.6rem;
     color: #000000;
@@ -279,6 +309,10 @@ body {
     line-height: 1;
     text-decoration: none;
     transition: all .3s; }
+    @media (max-width: 75em) {
+      .popup__close:link, .popup__close:visited {
+        top: auto;
+        margin-top: 1rem; } }
   .popup__close:hover {
     color: #623fa3; }
   .popup:target .popup__box {
@@ -295,6 +329,10 @@ body {
     padding: 3px;
     font-size: 1.6rem;
     transition: all .2s; }
+  @media (max-width: 75em) {
+    .btn-text {
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem; } }
   .btn-text:hover {
     background-color: #9a7ecd;
     color: #ffffff;

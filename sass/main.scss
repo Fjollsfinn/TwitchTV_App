@@ -26,6 +26,7 @@ $offlineColor: #bfbfbf;
 1200 - 1800px:  is where our normal styles apply
 1800px + :      Big desktop
 $breakpoint argument choices:
+-phone-vey-slim
 - phone-slim
 - phone
 - tab-port
@@ -358,10 +359,27 @@ body {
         visibility: visible;
     }
     
-    
     &__left {
         width: 50%;
-        display: table-cell
+        display: table-cell;
+
+        @include respond(tab-land) {
+            width: 23%;
+            display: block;
+            position: absolute;
+            top: 20%;
+            right: 0;
+            border: 3px solid #623fa3;
+        }
+
+        @include respond(phone) {
+            width: 30%;
+            top: 30%;
+        }
+
+        @include respond(phone-slim) {
+            top: 32%;
+        }
     }
     
     &__img {
@@ -375,6 +393,12 @@ body {
         vertical-align: top;
         padding: 3rem 5rem;
         text-align: center;
+
+        @include respond(tab-land) {
+            width: 100%;
+            display: block;
+            padding: 0;
+        }
     }
     
     &__info {
@@ -399,6 +423,11 @@ body {
         color: transparent;
         text-transform: uppercase;
         transition: all .3s;
+
+        @include respond(tab-land) {
+            padding-top: 3rem;
+        }
+
         &:hover {
             transform: skewY(3deg) skewX(15deg) scale(1.1);
             text-shadow: .5rem 1rem 2rem rgba($colorBlack, 0.2);
@@ -414,6 +443,14 @@ body {
             color: transparent;
             margin-right: 1rem;
             margin-bottom: 1rem;
+
+            @include respond(tab-land) {
+                padding-left: 5rem;
+            }
+
+            @include respond(phone) {
+                padding-left: 3rem;
+            }
         }
     }
     
@@ -436,6 +473,11 @@ body {
             line-height: 1;
             text-decoration: none;
             transition: all .3s; 
+
+            @include respond(tab-land) {
+                top: auto;
+                margin-top: 1rem;
+            }
         }
       
         &:hover {
@@ -462,6 +504,11 @@ body {
         transition: all .2s;
     }
     
+    @include respond(tab-land) {
+        margin-top: 2.5rem;
+        margin-bottom: 1.5rem;
+    }
+
     &:hover {
         background-color: $twitchColorBrighter;
         color: $colorWhite;
