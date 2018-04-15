@@ -229,15 +229,17 @@ body {
     display: table-cell; }
     @media (max-width: 75em) {
       .popup__left {
-        width: 23%;
+        width: 30%;
         display: block;
         position: absolute;
-        top: 20%;
+        top: 8rem;
         right: 0;
         border: 3px solid #623fa3; } }
+    @media (max-width: 45.625em) {
+      .popup__left {
+        top: 9rem; } }
     @media (max-width: 37.5em) {
       .popup__left {
-        width: 30%;
         top: 30%; } }
     @media (max-width: 31.25em) {
       .popup__left {
@@ -257,8 +259,20 @@ body {
         display: block;
         padding: 0; } }
   .popup__info {
-    width: 70%;
+    width: 100%;
     display: flex; }
+    @media (max-width: 75em) {
+      .popup__info {
+        width: 70%; } }
+    @media (max-width: 45.625em) {
+      .popup__info {
+        width: 100%; } }
+    @media (max-width: 37.5em) {
+      .popup__info {
+        width: 70%; } }
+    @media (max-width: 25em) {
+      .popup__info {
+        width: 100%; } }
     .popup__info .fa-user {
       color: #623fa3; }
     .popup__info .fa-heart {

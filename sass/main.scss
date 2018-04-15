@@ -47,6 +47,9 @@ $breakpoint argument choices:
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content };
     };
+    @if $breakpoint == image-brake-730px {
+        @media (max-width: 45.625em) { @content };
+    };
     //900px
     @if $breakpoint == tab-port {
         @media (max-width: 56.25em) { @content };
@@ -364,16 +367,19 @@ body {
         display: table-cell;
 
         @include respond(tab-land) {
-            width: 23%;
+            width: 30%;
             display: block;
             position: absolute;
-            top: 20%;
+            top: 8rem;
             right: 0;
             border: 3px solid #623fa3;
         }
 
+        @include respond(image-brake-730px) {
+            top: 9rem;
+        }
+
         @include respond(phone) {
-            width: 30%;
             top: 30%;
         }
 
@@ -402,8 +408,23 @@ body {
     }
     
     &__info {
-        width: 70%;
+        width: 100%;
         display: flex;
+
+        @include respond(tab-land) {
+            width: 70%;
+        }
+
+        @include respond(image-brake-730px) {
+            width: 100%;
+        }
+        @include respond(phone) {
+            width: 70%;
+        }
+
+        @include respond(phone-very-slim) {
+            width: 100%;
+        }
         
         .fa-user {
             color: $twitchColorDarker;
