@@ -114,7 +114,7 @@ body {
     padding: 0 1.5rem;
     font-family: 'Roboto Mono', monospace;
     width: 37rem;
-    max-height: auto;
+    height: auto;
     background-color: white;
     border-radius: .3rem;
     opacity: 1;
@@ -181,7 +181,7 @@ body {
                     position: relative;
 
                     @include respond(phone-very-slim) {
-                        width: 8rem;
+                        width: 9rem;
                     }
             
                     &:hover {
