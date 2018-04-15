@@ -151,7 +151,7 @@ body {
     margin-bottom: 1.5rem;
     border-radius: .3rem;
     transition: all .3s ease-out;
-    max-width: 32rem;
+    width: 32rem;
     transform-origin: 0 0; }
     .container__twitch-user::after {
       content: "";
@@ -191,8 +191,8 @@ body {
     .container__twitch-user .col-1-of-3--red {
       color: #ff0000; }
   .container #content {
-    overflow-y: scroll;
-    height: 30rem; }
+    max-height: 30rem;
+    overflow-y: scroll; }
     .container #content a {
       text-decoration: none;
       color: #000000; }

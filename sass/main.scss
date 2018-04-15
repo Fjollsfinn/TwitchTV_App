@@ -249,7 +249,7 @@ body {
         margin-bottom: 1.5rem;
         border-radius: .3rem;
         transition: all .3s ease-out;
-        max-width: 32rem;
+        width: 32rem;
         //This prevents from hideing overflow-x when hover(scale). Fix the problem when overflow-y: scroll;
         transform-origin: 0 0;
       
@@ -314,8 +314,8 @@ body {
     }
 
     #content {
+        max-height: 30rem;
         overflow-y: scroll;
-        height: 30rem;
         
         a {
             text-decoration: none;
