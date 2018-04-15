@@ -60,7 +60,7 @@ body {
   border-radius: .3rem;
   opacity: 1;
   transition: all 2s ease-out 1s;
-  overflow: hidden; }
+  overflow-y: hidden; }
   @media (max-width: 25em) {
     .container {
       width: 34rem; } }
