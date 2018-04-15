@@ -192,7 +192,7 @@ body {
       color: #ff0000; }
   .container #content {
     overflow-y: scroll;
-    max-height: 30rem; }
+    height: 30rem; }
     .container #content a {
       text-decoration: none;
       color: #000000; }
