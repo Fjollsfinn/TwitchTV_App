@@ -257,6 +257,7 @@ body {
         display: block;
         padding: 0; } }
   .popup__info {
+    width: 70%;
     display: flex; }
     .popup__info .fa-user {
       color: #623fa3; }
