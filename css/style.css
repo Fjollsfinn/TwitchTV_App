@@ -220,7 +220,8 @@ body {
     opacity: 0;
     transition: all .5s .2s;
     font-size: 1.6rem;
-    color: #000000; }
+    color: #000000;
+    overflow-y: scroll; }
   .popup:target {
     opacity: 1;
     visibility: visible; }
@@ -243,7 +244,7 @@ body {
         top: 11.5rem; } }
     @media (max-width: 25em) {
       .popup__left {
-        top: 12.5rem; } }
+        top: 11rem; } }
   .popup__img {
     width: 100%;
     display: block; }

@@ -354,6 +354,7 @@ body {
         transition: all .5s .2s;
         font-size: 1.6rem;
         color: $colorBlack;
+        overflow-y: scroll;
     }
     
     &:target {
@@ -382,9 +383,8 @@ body {
         @include respond(phone) {
             top: 11.5rem;
         }
-
         @include respond(phone-very-slim) {
-            top: 12.5rem;
+            top: 11rem;
         }
     }
     
