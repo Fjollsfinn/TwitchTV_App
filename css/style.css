@@ -290,10 +290,11 @@ body {
     display: inline-block; }
     @media (max-width: 75em) {
       .popup__header {
-        padding-top: 3rem; } }
-    @media (max-width: 75em) {
-      .popup__header {
+        padding-top: 3rem;
         font-size: 2.8rem; } }
+    @media (max-width: 31.25em) {
+      .popup__header {
+        margin-bottom: 3.5rem; } }
     .popup__header:hover {
       transform: skewY(3deg) skewX(15deg) scale(1.1);
       text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
@@ -332,6 +333,9 @@ body {
       .popup__close:link, .popup__close:visited {
         top: auto;
         margin-top: 1rem; } }
+    @media (max-width: 25em) {
+      .popup__close:link, .popup__close:visited {
+        right: 1.5rem; } }
   .popup__close:hover {
     color: #623fa3; }
   .popup:target .popup__box {
