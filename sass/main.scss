@@ -335,7 +335,6 @@ body {
     left: 0;
     background-color: rgba($colorBlack, .75);
     font-family: 'Roboto Mono', monospace;
-    overflow-y: scroll;
     
     //Hidden when not target.
     visibility: hidden;
@@ -452,8 +451,8 @@ body {
             font-size: 2.8rem;
         }
 
-        @include respond(phone-slim) {
-            margin-bottom: 3.5rem;
+        @include respond(phone) {
+            margin-bottom: 2.5rem;
         }
 
         &:hover {
@@ -539,6 +538,11 @@ body {
     @include respond(tab-land) {
         margin-top: 2.5rem;
         margin-bottom: 1.5rem;
+    }
+
+    @include respond(phone) {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     &:hover {
