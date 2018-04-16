@@ -237,13 +237,13 @@ body {
         border: 3px solid #623fa3; } }
     @media (max-width: 45.625em) {
       .popup__left {
-        top: 9rem; } }
+        top: 9.5rem; } }
     @media (max-width: 37.5em) {
       .popup__left {
-        top: 30%; } }
-    @media (max-width: 31.25em) {
+        top: 11.5rem; } }
+    @media (max-width: 25em) {
       .popup__left {
-        top: 32%; } }
+        top: 12.5rem; } }
   .popup__img {
     width: 100%;
     display: block; }
@@ -286,10 +286,14 @@ body {
     background-clip: text;
     color: transparent;
     text-transform: uppercase;
-    transition: all .3s; }
+    transition: all .3s;
+    display: inline-block; }
     @media (max-width: 75em) {
       .popup__header {
         padding-top: 3rem; } }
+    @media (max-width: 75em) {
+      .popup__header {
+        font-size: 2.8rem; } }
     .popup__header:hover {
       transform: skewY(3deg) skewX(15deg) scale(1.1);
       text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
