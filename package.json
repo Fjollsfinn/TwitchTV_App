@@ -4,7 +4,9 @@
   "description": "Web app to check if twitch streamers are online or offline.",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.min.css --out-style compressed"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,8 @@
   },
   "homepage": "https://github.com/Fjollsfinn/TwitchTV_App#readme",
   "devDependencies": {
-    "node-sass": "^4.8.3"
+    "autoprefixer": "^8.3.0",
+    "node-sass": "^4.8.3",
+    "postcss-cli": "^5.0.0"
   }
 }
