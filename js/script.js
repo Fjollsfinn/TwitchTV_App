@@ -29,8 +29,8 @@ $(document).ready(function() {
                     newContent += "</div></div></a></div>";
                     document.getElementById("content").innerHTML = newContent;
                 }
-            })
-        })
+            });
+        });
     }
     
     //Funtion that gets offline streamers.
@@ -67,10 +67,10 @@ $(document).ready(function() {
                             newContent += "</div></div></a></div>";
                             document.getElementById("content").innerHTML = newContent;
                         }
-                    })
+                    });
                 }
-            })
-        })
+            });
+        });
     }
     
     //Function that gets user input as a query to find streamer.
@@ -97,7 +97,7 @@ $(document).ready(function() {
     $(".container__buttons--online").click(function () {
         $(".container__status--online").addClass("visible");
         $(".container__status--offline").removeClass("visible");
-    })
+    });
     
     $(".container__buttons--offline").click(function () {
         $(".container__status--offline").addClass("visible");
