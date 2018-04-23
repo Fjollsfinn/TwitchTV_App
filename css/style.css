@@ -238,12 +238,6 @@ body {
     @media (max-width: 45.625em) {
       .popup__left {
         top: 9.5rem; } }
-    @media (max-width: 37.5em) {
-      .popup__left {
-        top: 11.5rem; } }
-    @media (max-width: 25em) {
-      .popup__left {
-        top: 11rem; } }
   .popup__img {
     width: 100%;
     display: block; }
@@ -314,6 +308,9 @@ body {
       @media (max-width: 37.5em) {
         .popup__header--mini {
           padding-left: 3rem; } }
+      @media (max-width: 25em) {
+        .popup__header--mini {
+          padding-left: 1.5rem; } }
   .popup__text {
     font-size: 1.6rem;
     color: #000000;

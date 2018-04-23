@@ -378,13 +378,6 @@ body {
         @include respond(image-brake-730px) {
             top: 9.5rem;
         }
-
-        @include respond(phone) {
-            top: 11.5rem;
-        }
-        @include respond(phone-very-slim) {
-            top: 11rem;
-        }
     }
     
     &__img {
@@ -455,6 +448,8 @@ body {
             margin-bottom: 2.5rem;
         }
 
+        
+
         &:hover {
             transform: skewY(3deg) skewX(15deg) scale(1.1);
             text-shadow: .5rem 1rem 2rem rgba($colorBlack, 0.2);
@@ -477,6 +472,10 @@ body {
 
             @include respond(phone) {
                 padding-left: 3rem;
+            }
+
+            @include respond(phone-very-slim) {
+                padding-left: 1.5rem;
             }
         }
     }
