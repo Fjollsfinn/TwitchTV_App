@@ -126,7 +126,7 @@ function updatePopup (streamer) {
         newContent += "<h2 class='popup__header'>"+ cjsonp.name + " channel</h2>";
         newContent += "<div class='popup__info'><div class='popup__header--mini'>name:</div><p class='popup__text'>" + cjsonp.display_name + "</p></div>";
         newContent += "<div class='popup__info'><div class='popup__header--mini'>views:</div><p class='popup__text'>" + cjsonp.views + "</p><i class='fa fa-user'></i></div>";
-        newContent += "<div class='popup__info'><div class='popup__header--mini'>fallowers:</div><p class='popup__text'>" + cjsonp.followers + "</p><i class='fa fa-heart'></i></div>";
+        newContent += "<div class='popup__info'><div class='popup__header--mini'>followers:</div><p class='popup__text'>" + cjsonp.followers + "</p><i class='fa fa-heart'></i></div>";
         newContent += "<div class='popup__info'><div class='popup__header--mini'>language:</div><p class='popup__text'>" + cjsonp.broadcaster_language + "</p></div>";
         newContent += "<div class='popup__info'><div class='popup__header--mini'>game:</div><p class='popup__text'>" + cjsonp.game + "</p></i></div>";
         newContent += "<div class='popup__info'><div class='popup__header--mini'>status:</div><p class='popup__text'>" + cjsonp.status + "</p></div>";
