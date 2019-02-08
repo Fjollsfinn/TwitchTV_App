@@ -109,7 +109,7 @@ $(document).ready(function() {
         $(".container__status--offline").addClass("visible");
     }); 
     
-    getOnline(commonStreamers); //Calling getOnline() function when page is rendered.
+    setTimeout(getOnline(commonStreamers),1000); //Calling getOnline() function when page is rendered.
     getOffline(commonStreamers); //Calling getOffline() function when page is rendered.
     $('.container__input').change(userInput); //Watch for changes in input.
 });
