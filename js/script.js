@@ -109,6 +109,10 @@ $(document).ready(function() {
         $(".container__status--offline").addClass("visible");
     }); 
     
+    setTimeout(function() {
+        getOnline(commonStreamers); //Calling getOnline() function when page is rendered.
+        getOffline(commonStreamers; //Calling getOffline() function when page is rendered.
+    }, 1500)
     setTimeout(getOnline(commonStreamers),10000); //Calling getOnline() function when page is rendered.
     setTimeout(getOffline(commonStreamers),10000); //Calling getOffline() function when page is rendered.
     $('.container__input').change(userInput); //Watch for changes in input.
