@@ -109,8 +109,8 @@ $(document).ready(function() {
         $(".container__status--offline").addClass("visible");
     }); 
     
-    setTimeout(getOnline(commonStreamers),1000); //Calling getOnline() function when page is rendered.
-    setTimeout(getOffline(commonStreamers),1000); //Calling getOffline() function when page is rendered.
+    setTimeout(getOnline(commonStreamers),10000); //Calling getOnline() function when page is rendered.
+    setTimeout(getOffline(commonStreamers),10000); //Calling getOffline() function when page is rendered.
     $('.container__input').change(userInput); //Watch for changes in input.
 });
   
