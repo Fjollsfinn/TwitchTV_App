@@ -110,7 +110,7 @@ $(document).ready(function() {
     }); 
     
     setTimeout(getOnline(commonStreamers),1000); //Calling getOnline() function when page is rendered.
-    getOffline(commonStreamers); //Calling getOffline() function when page is rendered.
+    setTimeout(getOffline(commonStreamers),1000); //Calling getOffline() function when page is rendered.
     $('.container__input').change(userInput); //Watch for changes in input.
 });
   
