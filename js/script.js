@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    console.log("Created by Bart?omiej Tuchowski") //Signature.
-    $(".container").removeClass("hidden"); //Fades in intro - container.
+    console.log("Created by Bartłomiej Tuchowski");
+    $(".container").removeClass("hidden");
     var commonStreamers = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "noobs2ninjas", "ninja", "izakooo"]; //Common streamers nicks array.
     
     var newContent =""; //Varible to add content(with JSONP) to  #content and #popup-box.
@@ -39,14 +39,13 @@ $(document).ready(function() {
             var streamsJSONP = "https://wind-bow.gomix.me/twitch-api/streams/" + item +"?callback=?";
             $.getJSON(streamsJSONP, function(sjsonp) {
                 if (sjsonp.stream) {
-                    //Do nothing.
+                    return
                 }
-                //if the sjsonp.stream is null(so streamer is offline and we have no jsonp) gets another jsonp. 
                 else {
                     var channelJSONP = "https://wind-bow.gomix.me/twitch-api/channels/" + item +"?callback=?";
                     $.getJSON(channelJSONP, function(cjsonp) {
                         if (cjsonp.error) {
-                            alert(cjsonp.message); //Displays error message if the streamer is not found and avoid adding undefined streamer.
+                            console.log(cjsonp);
                         }
                         else {
                             newContent += "<div class='container__status--offline visible'>";
@@ -76,19 +75,18 @@ $(document).ready(function() {
     //Function that gets user input as a query to find streamer.
     function userInput () {
         newContent = ""; //Resets content to show only chosen streamer.
-        var entredName = []; //New array to let getOnline() and getOffline() functions work on new data.
+        var entredName = []; 
         var input = document.getElementsByClassName('container__input')[0].value; 
         entredName.push(input);
         console.log(input);
         if (input == "") {
             //This part is to avoid adding undefinded streamer after reseting the input content.
             getOnline(commonStreamers);
-            getOffline(commonStreamers);//Triggers updatePopup() function with the new data(entred by user).
+            getOffline(commonStreamers);
         }
         else {
-            getOnline(entredName); //Calling getOnline() function with new data. Won't work if streamer is offline.
-            getOffline(entredName); //Calling getOffline() function with new data. Won't work if streamer is online.
-            //Triggers updatePopup() function with the new data(entred by user).
+            getOnline(entredName);
+            getOffline(entredName);
             updatePopup(document.getElementsByClassName('container__input')[0].value);
         }
     }
@@ -137,7 +135,7 @@ function updatePopup (streamer) {
     })
 }
   
-//Triggers updatePopup() functions on elements that has been load by AJAX!
+//Triggers updatePopup() functions on elements that has been load by AJAX
 $(document).on("click", ".ESL_SC2", function() {
     updatePopup("ESL_SC2");
 });
