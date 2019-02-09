@@ -6,7 +6,7 @@ User Story: You can see whether one of popular streamers is currently streaming 
 User Story: You can see additional details about the channel and the stream after clicking on status output. <br />
 User Story: You can click Visit Channel button and be sent directly to the streamer Twitch.tv channel. <br />
 User Story: You can group streamers to online/offline/all. <br />
-User Story: You can find your own favourite streamer by the nickname. <br />
+User Story: You can find your own favourite streamer by the nickname. <b>EDIT: API has changed so I had to comment this functionality for now. Could fix that if I will shoot to real Twitch API with oAuth.</b> <br />
 
 
 
